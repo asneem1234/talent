@@ -1,0 +1,577 @@
+{
+  "metadata": {
+    "analysis_title": "COMPREHENSIVE EQUIVERSE INDEX CALCULATION: Sun Pharmaceutical Industries Limited",
+    "entity_name": "Sun Pharmaceutical Industries Limited (SPIL)",
+    "reporting_period": "FY 2024-25 (April 1, 2024 to March 31, 2025)",
+    "sector": "Healthcare & Pharma",
+    "calculation_date": "January 6, 2026",
+    "data_source": "BRSR Report FY 2024-25",
+    "data_reliability": "★★★ (Primary Source - Audited BRSR)",
+    "methodology_version": "Equiverse Index v1.0"
+  },
+
+  "tier_mapping_methodology": {
+    "note": "BRSR reports do not explicitly provide tier breakdowns. Proxy mapping used:",
+    "tier_1_entry_level": {
+      "proxy_source": "Other than Permanent Employees",
+      "rationale": "Represents contractual, temporary, and entry-level workers",
+      "male_count": 792,
+      "female_count": 556,
+      "total_count": 1348
+    },
+    "tier_2_3_4_aggregated_management": {
+      "proxy_source": "Permanent Employees",
+      "rationale": "Aggregates Junior, Middle, and Senior Management (BRSR limitation)",
+      "male_count": 13089,
+      "female_count": 1586,
+      "total_count": 14675,
+      "note": "Cannot disaggregate into Tier 2, 3, 4 without additional data"
+    },
+    "tier_5_c_suite": {
+      "proxy_source": "Key Management Personnel (KMP)",
+      "rationale": "Represents C-Suite executives (CEO, CFO, etc.)",
+      "male_count": 2,
+      "female_count": 0,
+      "total_count": 2
+    },
+    "board_level": {
+      "proxy_source": "Board of Directors",
+      "rationale": "Governance layer (separate from operational hierarchy)",
+      "male_count": 7,
+      "female_count": 1,
+      "total_count": 8
+    }
+  },
+
+  "obj_1_representation_analysis": {
+    "objective": "Distribution of men vs. women at each hierarchical level",
+    "tier_1_entry_level": {
+      "male_count": 792,
+      "female_count": 556,
+      "total_count": 1348,
+      "male_percentage": 58.75,
+      "female_percentage": 41.25,
+      "status": "Strong Female Parity"
+    },
+    "tier_2_junior_management": {
+      "male_count": 13089,
+      "female_count": 1586,
+      "total_count": 14675,
+      "male_percentage": 89.19,
+      "female_percentage": 10.81,
+      "status": "Critical Female Underrepresentation",
+      "note": "Aggregated with Middle/Senior - cannot isolate Tier 2"
+    },
+    "tier_3_middle_management": {
+      "male_count": 13089,
+      "female_count": 1586,
+      "total_count": 14675,
+      "male_percentage": 89.19,
+      "female_percentage": 10.81,
+      "status": "Critical Female Underrepresentation",
+      "note": "Aggregated with Junior/Senior - cannot isolate Tier 3"
+    },
+    "tier_4_senior_management": {
+      "male_count": 13089,
+      "female_count": 1586,
+      "total_count": 14675,
+      "male_percentage": 89.19,
+      "female_percentage": 10.81,
+      "status": "Critical Female Underrepresentation",
+      "note": "Aggregated with Junior/Middle - cannot isolate Tier 4"
+    },
+    "tier_5_c_suite": {
+      "male_count": 2,
+      "female_count": 0,
+      "total_count": 2,
+      "male_percentage": 100.0,
+      "female_percentage": 0.0,
+      "status": "Glass Ceiling - Complete Exclusion"
+    },
+    "board_level": {
+      "male_count": 7,
+      "female_count": 1,
+      "total_count": 8,
+      "male_percentage": 87.5,
+      "female_percentage": 12.5,
+      "status": "Governance Gap"
+    },
+    "key_insight": "Women enter at near parity (41.25%) but drop to 10.81% at permanent management and 0% at C-Suite"
+  },
+
+  "calc_1_tier_representation_ratios": {
+    "description": "Female percentage at each tier",
+    "R1_entry_level": 41.25,
+    "R2_junior_management": 10.81,
+    "R3_middle_management": 10.81,
+    "R4_senior_management": 10.81,
+    "R5_c_suite": 0.0,
+    "R_board": 12.5,
+    "formula_used": "Female_Ratio_i = (Female_Count_i / Total_Count_i) × 100"
+  },
+
+  "obj_2_progression_leaky_pipeline": {
+    "objective": "Where women disappear between levels",
+    "transition_analysis": {
+      "entry_to_junior_management": {
+        "from_percentage": 41.25,
+        "to_percentage": 10.81,
+        "drop_percentage_points": 30.44,
+        "drop_rate": 73.79,
+        "status": "EXTREME LEAKAGE - Primary Bottleneck"
+      },
+      "junior_to_middle_management": {
+        "from_percentage": 10.81,
+        "to_percentage": 10.81,
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "status": "Stagnant (due to aggregated data)"
+      },
+      "middle_to_senior_management": {
+        "from_percentage": 10.81,
+        "to_percentage": 10.81,
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "status": "Stagnant (due to aggregated data)"
+      },
+      "senior_to_c_suite": {
+        "from_percentage": 10.81,
+        "to_percentage": 0.0,
+        "drop_percentage_points": 10.81,
+        "drop_rate": 100.0,
+        "status": "COMPLETE BLOCKAGE - Glass Ceiling"
+      }
+    },
+    "key_insight": "73.79% of women are lost in transition from entry to permanent management. 100% lost from senior to C-Suite."
+  },
+
+  "calc_2_pipeline_flow_ratio": {
+    "description": "Measures how well women progress from entry to top",
+    "formula": "PFR = R5 / R1",
+    "calculation": "0.0 / 41.25 = 0.0",
+    "pfr_score": 0.0,
+    "interpretation": "Total Pipeline Blockage",
+    "ideal_pfr": 1.0,
+    "actual_vs_ideal": "0% of ideal pipeline flow",
+    "status": "CRITICAL FAILURE",
+    "alternative_calculation_board": {
+      "formula": "PFR_Board = R_Board / R1",
+      "calculation": "12.5 / 41.25 = 0.303",
+      "pfr_board_score": 0.303,
+      "interpretation": "70% leakage from entry to board"
+    }
+  },
+
+  "calc_3_broken_rung_detection": {
+    "description": "First promotion bottleneck severity",
+    "formula": "BRS = (R1 - R2) / R1",
+    "calculation": "(41.25 - 10.81) / 41.25 = 0.7379",
+    "broken_rung_severity": 0.7379,
+    "broken_rung_percentage": 73.79,
+    "interpretation": "EXTREME BROKEN RUNG",
+    "severity_classification": {
+      "threshold_minimal": 0.1,
+      "threshold_moderate": 0.4,
+      "threshold_severe": 0.7,
+      "actual_severity": 0.7379,
+      "classification": "Beyond Severe - Structural Barrier"
+    },
+    "key_insight": "73.79% of women at entry level do NOT successfully transition to permanent management roles"
+  },
+
+  "obj_3_retention_broken_rung": {
+    "objective": "Why are women leaving?",
+    "turnover_analysis": {
+      "permanent_employees_fy_2024_25": {
+        "male_turnover_rate": 14.09,
+        "female_turnover_rate": 12.64,
+        "gap": -1.45,
+        "interpretation": "Women STAY 1.45% longer than men"
+      },
+      "permanent_workers_fy_2024_25": {
+        "male_turnover_rate": 7.39,
+        "female_turnover_rate": 2.16,
+        "gap": -5.23,
+        "interpretation": "Women STAY 5.23% longer than men (workers category)"
+      }
+    },
+    "retention_rate_analysis": {
+      "permanent_employees": {
+        "male_retention_rate": 85.91,
+        "female_retention_rate": 87.36,
+        "gap": 1.45,
+        "interpretation": "Women have HIGHER retention than men"
+      },
+      "permanent_workers": {
+        "male_retention_rate": 92.61,
+        "female_retention_rate": 97.84,
+        "gap": 5.23,
+        "interpretation": "Women have SIGNIFICANTLY HIGHER retention than men"
+      }
+    },
+    "key_insight": "Leakage is NOT due to attrition. Women stay longer than men. This is a PROGRESSION/PROMOTION BARRIER, not a retention problem."
+  },
+
+  "calc_4_retention_metrics": {
+    "description": "Gender-specific retention calculations",
+    "permanent_employees": {
+      "retention_rate_male": 85.91,
+      "retention_rate_female": 87.36,
+      "retention_gap": -1.45,
+      "formula_used": "Retention_Rate = 100 - Turnover_Rate",
+      "interpretation": "Negative gap = women retain better"
+    },
+    "parental_leave_retention": {
+      "permanent_employees_male": {
+        "return_to_work_rate": 92.57,
+        "retention_rate_after_return": 94.10,
+        "total_retention": 87.09
+      },
+      "permanent_employees_female": {
+        "return_to_work_rate": 98.33,
+        "retention_rate_after_return": 100.0,
+        "total_retention": 98.33
+      },
+      "gender_gap": {
+        "return_to_work_gap": 5.76,
+        "retention_after_return_gap": 5.9,
+        "total_retention_gap": 11.24,
+        "interpretation": "Women return at higher rates AND stay after return - retention is NOT the issue"
+      }
+    }
+  },
+
+  "calc_5_auc_equity_score": {
+    "description": "Area Under Curve - Overall equity representation",
+    "methodology": "Sum of female percentages across all 5 tiers",
+    "tier_percentages": {
+      "tier_1": 41.25,
+      "tier_2": 10.81,
+      "tier_3": 10.81,
+      "tier_4": 10.81,
+      "tier_5": 0.0
+    },
+    "actual_auc": 73.68,
+    "ideal_auc": 250.0,
+    "formula": "Equity_Score = (Actual_AUC / Ideal_AUC) × 100",
+    "calculation": "(73.68 / 250.0) × 100 = 29.47",
+    "overall_equity_score_auc": 29.47,
+    "interpretation": "Company achieves 29.47% of ideal gender equity across hierarchy",
+    "grade": "D+ (Below 30% is critical failure)"
+  },
+
+  "calc_6_weighted_tier_score": {
+    "description": "Weighted score emphasizing leadership tiers",
+    "weights": {
+      "tier_1_entry": 0.10,
+      "tier_2_junior": 0.15,
+      "tier_3_middle": 0.25,
+      "tier_4_senior": 0.30,
+      "tier_5_c_suite": 0.20
+    },
+    "weighted_calculations": {
+      "tier_1_contribution": {
+        "female_percentage": 41.25,
+        "weight": 0.10,
+        "weighted_score": 4.125
+      },
+      "tier_2_contribution": {
+        "female_percentage": 10.81,
+        "weight": 0.15,
+        "weighted_score": 1.6215
+      },
+      "tier_3_contribution": {
+        "female_percentage": 10.81,
+        "weight": 0.25,
+        "weighted_score": 2.7025
+      },
+      "tier_4_contribution": {
+        "female_percentage": 10.81,
+        "weight": 0.30,
+        "weighted_score": 3.243
+      },
+      "tier_5_contribution": {
+        "female_percentage": 0.0,
+        "weight": 0.20,
+        "weighted_score": 0.0
+      }
+    },
+    "total_weighted_score": 11.692,
+    "formula": "Weighted_Score = Σ(Weight_i × Female_Ratio_i)",
+    "normalized_weighted_index": {
+      "calculation": "(11.692 / 50) × 100",
+      "weighted_equity_index": 23.38,
+      "interpretation": "Weighted index penalizes lack of women at senior levels"
+    }
+  },
+
+  "calc_7_bottleneck_tier_identification": {
+    "description": "Identify tiers with >10% drop in female representation",
+    "transitions": [
+      {
+        "from_tier": "Entry (Tier 1)",
+        "to_tier": "Junior Management (Tier 2)",
+        "drop_percentage_points": 30.44,
+        "drop_rate": 73.79,
+        "threshold": 10.0,
+        "is_bottleneck": true,
+        "severity": "EXTREME",
+        "status": "PRIMARY BOTTLENECK"
+      },
+      {
+        "from_tier": "Junior Management (Tier 2)",
+        "to_tier": "Middle Management (Tier 3)",
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "threshold": 10.0,
+        "is_bottleneck": false,
+        "severity": "None",
+        "status": "No data (aggregated)"
+      },
+      {
+        "from_tier": "Middle Management (Tier 3)",
+        "to_tier": "Senior Management (Tier 4)",
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "threshold": 10.0,
+        "is_bottleneck": false,
+        "severity": "None",
+        "status": "No data (aggregated)"
+      },
+      {
+        "from_tier": "Senior Management (Tier 4)",
+        "to_tier": "C-Suite (Tier 5)",
+        "drop_percentage_points": 10.81,
+        "drop_rate": 100.0,
+        "threshold": 10.0,
+        "is_bottleneck": true,
+        "severity": "COMPLETE BLOCKAGE",
+        "status": "GLASS CEILING"
+      }
+    ],
+    "critical_bottlenecks_summary": {
+      "count": 2,
+      "locations": [
+        "Entry → Junior Management (73.79% drop)",
+        "Senior Management → C-Suite (100% drop)"
+      ]
+    }
+  },
+
+  "compensation_pay_equity_analysis": {
+    "objective": "Measure pay gaps at each level",
+    "board_of_directors": {
+      "male_median_remuneration": 9800000,
+      "female_median_remuneration": 6800000,
+      "pay_gap_absolute": 3000000,
+      "pay_gap_percentage": 30.61,
+      "interpretation": "Women directors earn 30.61% less than male directors"
+    },
+    "key_management_personnel": {
+      "male_median_remuneration": 32598543,
+      "female_median_remuneration": 0,
+      "pay_gap_absolute": "N/A (No female KMPs)",
+      "pay_gap_percentage": "N/A",
+      "interpretation": "Zero female representation in KMP = no pay gap data"
+    },
+    "employees_other_than_bod_kmp": {
+      "male_median_remuneration": 944836,
+      "female_median_remuneration": 726372,
+      "pay_gap_absolute": 218464,
+      "pay_gap_percentage": 23.12,
+      "interpretation": "Women employees earn 23.12% less than male employees"
+    },
+    "workers": {
+      "male_median_remuneration": 417252,
+      "female_median_remuneration": 256458,
+      "pay_gap_absolute": 160794,
+      "pay_gap_percentage": 38.54,
+      "interpretation": "Women workers earn 38.54% less than male workers"
+    },
+    "overall_pay_equity_status": "SEVERE PAY GAPS across all measurable levels (23-39%)"
+  },
+
+  "data_quality_assessment": {
+    "data_completeness": {
+      "tier_1_entry": "★★★ Complete",
+      "tier_2_junior": "★ Aggregated with Tiers 3 & 4 - Limited granularity",
+      "tier_3_middle": "★ Aggregated with Tiers 2 & 4 - Limited granularity",
+      "tier_4_senior": "★ Aggregated with Tiers 2 & 3 - Limited granularity",
+      "tier_5_c_suite": "★★★ Complete",
+      "board": "★★★ Complete",
+      "turnover_data": "★★★ Complete (3-year historical)",
+      "compensation_data": "★★★ Complete"
+    },
+    "data_source_reliability": "★★★ (Primary - Audited BRSR Report)",
+    "known_limitations": [
+      "Cannot disaggregate Permanent Employees into Junior/Middle/Senior tiers",
+      "Workers vs Employees category distinction limits hierarchy mapping",
+      "No tier-specific attrition rates available",
+      "No promotion rate data disclosed"
+    ],
+    "confidence_level": "High for Entry, C-Suite, Board | Moderate for Middle Management tiers"
+  },
+
+  "obj_4_benchmarking_readiness": {
+    "objective": "Compare against sector and best-in-class",
+    "sector_classification": "Healthcare & Pharma",
+    "comparative_metrics_available": {
+      "overall_equity_score_auc": 29.47,
+      "weighted_equity_index": 23.38,
+      "pipeline_flow_ratio": 0.0,
+      "broken_rung_severity": 73.79,
+      "c_suite_female_percentage": 0.0,
+      "board_female_percentage": 12.5
+    },
+    "benchmarking_status": "READY for intra-sector comparison once other pharma companies analyzed",
+    "sector_average_needed": "Require 5-10 other pharma companies for meaningful benchmarking"
+  },
+
+  "obj_5_temporal_tracking_readiness": {
+    "objective": "Track year-over-year change",
+    "historical_data_available": {
+      "turnover_rates": {
+        "fy_2024_25": "Complete",
+        "fy_2023_24": "Complete",
+        "fy_2022_23": "Complete"
+      },
+      "representation_data": {
+        "fy_2024_25": "Complete",
+        "previous_years": "Not available in current report"
+      }
+    },
+    "temporal_tracking_status": "PARTIAL - Can track turnover trends, but need multi-year BRSR for representation trends",
+    "recommendation": "Collect Sun Pharma BRSR reports for FY 2022-23 and FY 2023-24 for trend analysis"
+  },
+
+  "policy_and_commitments": {
+    "official_diversity_target": {
+      "commitment": "30% women representation across global workforce by 2040",
+      "target_year": 2040,
+      "baseline_year": "Not specified",
+      "current_status": "10.81% (Permanent Employees)",
+      "gap_to_target": 19.19,
+      "years_remaining": 15,
+      "required_annual_increase": 1.28,
+      "trajectory_assessment": "Severely off-track without aggressive intervention"
+    },
+    "policies_in_place": {
+      "equal_opportunity_policy": "Yes",
+      "anti_sexual_harassment_policy": "Yes (7 cases filed, 6 upheld, 1 pending)",
+      "parental_leave_policy": "Yes (100% benefit coverage)",
+      "flexible_work_policy": "Not explicitly disclosed",
+      "career_break_accommodation": "Not explicitly disclosed"
+    }
+  },
+
+  "visualization_data_exports": {
+    "equiverse_pyramid_coordinates": {
+      "tier_1_entry": {
+        "male_percentage": 58.75,
+        "female_percentage": 41.25,
+        "bar_width_male": 58.75,
+        "bar_width_female": 41.25
+      },
+      "tier_2_junior": {
+        "male_percentage": 89.19,
+        "female_percentage": 10.81,
+        "bar_width_male": 89.19,
+        "bar_width_female": 10.81
+      },
+      "tier_3_middle": {
+        "male_percentage": 89.19,
+        "female_percentage": 10.81,
+        "bar_width_male": 89.19,
+        "bar_width_female": 10.81
+      },
+      "tier_4_senior": {
+        "male_percentage": 89.19,
+        "female_percentage": 10.81,
+        "bar_width_male": 89.19,
+        "bar_width_female": 10.81
+      },
+      "tier_5_c_suite": {
+        "male_percentage": 100.0,
+        "female_percentage": 0.0,
+        "bar_width_male": 100.0,
+        "bar_width_female": 0.0
+      },
+      "board": {
+        "male_percentage": 87.5,
+        "female_percentage": 12.5,
+        "bar_width_male": 87.5,
+        "bar_width_female": 12.5
+      }
+    }
+  },
+
+  "executive_summary": {
+    "overall_verdict": "CRITICAL EQUITY FAILURE",
+    "key_findings": [
+      "Entry-level parity exists (41.25% female), but collapses at permanent management (10.81%)",
+      "Broken Rung Severity of 73.79% indicates structural barrier at first promotion",
+      "Pipeline Flow Ratio of 0.0 shows complete blockage to C-Suite",
+      "Women have HIGHER retention than men (87.36% vs 85.91%), disproving attrition hypothesis",
+      "Problem is PROGRESSION, not retention - women stay but are not promoted",
+      "Pay gaps range from 23-39% across all levels",
+      "Company's own 2040 target of 30% requires 1.28% annual increase but trajectory is unclear"
+    ],
+    "primary_bottleneck": "Transition from entry-level to permanent management roles",
+    "glass_ceiling_detected": "Yes - 0% women in C-Suite despite 10.81% at senior management",
+    "recommended_interventions": [
+      "Mandate quotas for permanent role conversions of female entry-level employees",
+      "Audit promotion criteria for bias in Tier 1→Tier 2 transition",
+      "Implement sponsorship programs for high-potential women at entry level",
+      "Review compensation structures to eliminate 23-39% pay gaps",
+      "Set interim targets (e.g., 20% by 2030) to track progress toward 2040 goal"
+    ]
+  },
+
+  "minimum_viable_data_set_checklist": {
+    "total_employees_by_gender": "✓ Complete",
+    "entry_level_gender_counts": "✓ Complete (Other than Permanent)",
+    "junior_management_gender_counts": "⚠ Aggregated with Middle/Senior",
+    "middle_management_gender_counts": "⚠ Aggregated with Junior/Senior",
+    "senior_management_gender_counts": "⚠ Aggregated with Junior/Middle",
+    "c_suite_gender_counts": "✓ Complete (KMP)",
+    "board_composition": "✓ Complete",
+    "overall_turnover_by_gender": "✓ Complete",
+    "company_sector": "✓ Complete (Healthcare & Pharma)",
+    "reporting_year": "✓ Complete (FY 2024-25)"
+  },
+
+  "highly_desirable_data_set_checklist": {
+    "tier_specific_attrition": "✗ Not available",
+    "promotion_rates_by_gender": "✗ Not available",
+    "median_compensation_by_tier": "⚠ Available but not tier-specific",
+    "parental_leave_return_rates": "✓ Complete (98.33% female, 92.57% male)",
+    "average_tenure_by_gender": "✗ Not available"
+  },
+
+  "aspirational_data_set_checklist": {
+    "role_type_line_vs_staff": "✗ Not available",
+    "flexible_work_adoption": "✗ Not available",
+    "training_hours_by_gender": "✗ Not available (only 100% coverage reported)",
+    "reason_for_exit": "✗ Not available",
+    "career_break_accommodation": "✗ Not available"
+  },
+
+  "next_steps": {
+    "immediate_actions": [
+      "Validate calculations with Sun Pharma stakeholders",
+      "Request disaggregated Permanent Employee data (Tiers 2, 3, 4)",
+      "Collect BRSR reports for other pharma companies (e.g., Dr. Reddy's, Cipla, Lupin)",
+      "Build sector average for Healthcare & Pharma"
+    ],
+    "short_term_actions": [
+      "Analyze 5-10 additional companies to test formula robustness",
+      "Present findings to supervisor for methodology validation",
+      "Create standardized data collection template for all 500 companies"
+    ],
+    "long_term_actions": [
+      "Roll out Equiverse Index to all Top 500 listed companies",
+      "Establish annual/biennial tracking mechanism",
+      "Publish sector-wise best-in-class case studies"
+    ]
+  }
+}

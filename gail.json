@@ -1,0 +1,199 @@
+{
+  "brsr_gender_data_points": {
+    "metadata": {
+      "entity_name": "GAIL (India) Limited",
+      "reporting_period": "FY 2023-24",
+      "sector": "Energy & Natural Gas",
+      "total_employees": 4191,
+      "total_workers": 14840,
+      "data_source": "BRSR Report FY 2023-24"
+    },
+    "section_a_general_disclosures": {
+      "ii_workforce_composition": {
+        "2_employees_by_gender": {
+          "priority": "critical",
+          "permanent_employees": {
+            "male": {"number": 3889, "percentage": 93.0},
+            "female": {"number": 302, "percentage": 7.0},
+            "total": 4191
+          },
+          "other_than_permanent_employees": {
+            "male": {"number": 0, "percentage": 0.0},
+            "female": {"number": 0, "percentage": 0.0},
+            "total": 0
+          },
+          "permanent_workers": {
+            "male": {"number": 805, "percentage": 95.0},
+            "female": {"number": 42, "percentage": 5.0},
+            "total": 847
+          },
+          "other_than_permanent_workers": {
+            "male": {"number": 13541, "percentage": 96.77},
+            "female": {"number": 452, "percentage": 3.23},
+            "total": 13993
+          },
+          "total_workforce": {
+            "male": {"number": 18235, "percentage": 95.8},
+            "female": {"number": 796, "percentage": 4.2},
+            "total": 19031
+          }
+        },
+        "3_differently_abled_by_gender": {
+          "priority": "critical",
+          "permanent_employees": {
+            "male": {"number": 64, "percentage": 88.9},
+            "female": {"number": 8, "percentage": 11.1},
+            "total": 72
+          },
+          "permanent_workers": {
+            "male": {"number": 29, "percentage": 85.3},
+            "female": {"number": 5, "percentage": 14.7},
+            "total": 34
+          }
+        },
+        "4_women_in_leadership": {
+          "priority": "critical",
+          "board_of_directors": {
+            "total_count": 14,
+            "number_of_females": 1,
+            "percentage_of_females": 7.0
+          },
+          "key_management_personnel": {
+            "total_count": 1,
+            "number_of_females": 0,
+            "percentage_of_females": 0.0,
+            "note": "Excluding Whole Time Directors"
+          }
+        },
+        "5_turnover_rate_by_gender": {
+          "priority": "critical",
+          "fy_2023_24": {
+            "permanent_employees": {
+              "male_turnover_rate": 3.84,
+              "female_turnover_rate": 3.79,
+              "total_turnover_rate": 3.83
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 2.38,
+              "female_turnover_rate": 0.0,
+              "total_turnover_rate": 2.28
+            }
+          },
+          "fy_2022_23": {
+            "permanent_employees": {
+              "male_turnover_rate": 4.29,
+              "female_turnover_rate": 5.39,
+              "total_turnover_rate": 4.37
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 2.61,
+              "female_turnover_rate": 0.0,
+              "total_turnover_rate": 2.55
+            }
+          },
+          "fy_2021_22": {
+            "permanent_employees": {
+              "male_turnover_rate": 4.82,
+              "female_turnover_rate": 3.73,
+              "total_turnover_rate": 4.75
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 2.16,
+              "female_turnover_rate": 2.74,
+              "total_turnover_rate": 2.19
+            }
+          }
+        }
+      }
+    },
+    "section_c_principle_wise_performance": {
+      "principle_3_employee_wellbeing": {
+        "essential_indicators": {
+          "5_parental_leave_return_retention": {
+            "priority": "super_critical",
+            "permanent_employees": {
+              "male": {
+                "return_to_work_rate": 96.9,
+                "retention_rate": 95.9
+              },
+              "female": {
+                "return_to_work_rate": 100.0,
+                "retention_rate": 100.0
+              },
+              "total": {
+                "return_to_work_rate": 98.45,
+                "retention_rate": 97.95
+              }
+            },
+            "permanent_workers": {
+              "male": {
+                "return_to_work_rate": 91.6,
+                "retention_rate": 100.0
+              },
+              "female": {
+                "return_to_work_rate": 100.0,
+                "retention_rate": 100.0
+              },
+              "total": {
+                "return_to_work_rate": 95.8,
+                "retention_rate": 100.0
+              }
+            }
+          }
+        }
+      },
+      "principle_5_human_rights": {
+        "essential_indicators": {
+          "60_remuneration_salary_wages": {
+            "priority": "most_critical_for_pay_equity",
+            "board_of_directors": {
+              "male": {
+                "number": 6,
+                "median_remuneration_rupees": 345577
+              },
+              "female": {
+                "number": 0,
+                "median_remuneration_rupees": 0
+              }
+            },
+            "key_managerial_personnel": {
+              "male": {
+                "number": 1,
+                "median_remuneration_rupees": 251978
+              },
+              "female": {
+                "number": 0,
+                "median_remuneration_rupees": 0
+              }
+            },
+            "employees_other_than_bod_kmp": {
+              "male": {
+                "number": 3888,
+                "median_remuneration_rupees": 174253
+              },
+              "female": {
+                "number": 302,
+                "median_remuneration_rupees": 146901
+              }
+            },
+            "workers": {
+              "male": {
+                "number": 805,
+                "median_remuneration_rupees": 75092
+              },
+              "female": {
+                "number": 42,
+                "median_remuneration_rupees": 59778
+              }
+            }
+          },
+          "gross_wages_to_females": {
+            "fy_2023_24": 6.0,
+            "fy_2022_23": 5.7,
+            "interpretation": "Females receive only 6.0% of total wages despite being 7.0% of employees"
+          }
+        }
+      }
+    }
+  }
+}

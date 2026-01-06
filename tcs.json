@@ -1,0 +1,150 @@
+{
+  "brsr_gender_data_points": {
+    "metadata": {
+      "entity_name": "Tata Consultancy Services Limited (TCS)",
+      "reporting_period": "FY 2023-24",
+      "sector": "Information Technology & AI",
+      "total_employees": 631858,
+      "data_source": "BRSR Report FY 2023-24"
+    },
+    "section_a_general_disclosures": {
+      "ii_workforce_composition": {
+        "2_employees_by_gender": {
+          "priority": "critical",
+          "permanent_employees": {
+            "male": {"number": 387448, "percentage": 64.4},
+            "female": {"number": 214098, "percentage": 35.6},
+            "total": 601546
+          },
+          "other_than_permanent_employees": {
+            "male": {"number": 19168, "percentage": 63.2},
+            "female": {"number": 11144, "percentage": 36.8},
+            "total": 30312
+          },
+          "total_employees": {
+            "male": {"number": 406616, "percentage": 64.4},
+            "female": {"number": 225242, "percentage": 35.6},
+            "total": 631858
+          }
+        },
+        "3_differently_abled_by_gender": {
+          "priority": "critical",
+          "permanent_employees": {
+            "male": {"number": 740, "percentage": 75.1},
+            "female": {"number": 246, "percentage": 24.9},
+            "total": 986
+          },
+          "other_than_permanent_employees": {
+            "male": {"number": 7, "percentage": 77.8},
+            "female": {"number": 2, "percentage": 22.2},
+            "total": 9
+          }
+        },
+        "4_women_in_leadership": {
+          "priority": "critical",
+          "board_of_directors": {
+            "total_count": 9,
+            "number_of_females": 2,
+            "percentage_of_females": 22.2
+          },
+          "key_management_personnel": {
+            "total_count": 4,
+            "number_of_females": 0,
+            "percentage_of_females": 0.0,
+            "note": "Includes CEO & MD, COO & ED, CFO, CS"
+          }
+        },
+        "5_turnover_rate_by_gender": {
+          "priority": "critical",
+          "fy_2023_24": {
+            "permanent_employees": {
+              "male_turnover_rate": 12.5,
+              "female_turnover_rate": 12.5,
+              "total_turnover_rate": 12.5
+            }
+          },
+          "fy_2022_23": {
+            "permanent_employees": {
+              "male_turnover_rate": 20.2,
+              "female_turnover_rate": 20.1,
+              "total_turnover_rate": 20.2
+            }
+          },
+          "fy_2021_22": {
+            "permanent_employees": {
+              "male_turnover_rate": 17.3,
+              "female_turnover_rate": 17.7,
+              "total_turnover_rate": 17.4
+            }
+          }
+        }
+      }
+    },
+    "section_c_principle_wise_performance": {
+      "principle_3_employee_wellbeing": {
+        "essential_indicators": {
+          "5_parental_leave_return_retention": {
+            "priority": "super_critical",
+            "permanent_employees": {
+              "male": {
+                "return_to_work_rate": 100.0,
+                "retention_rate": 92.9
+              },
+              "female": {
+                "return_to_work_rate": 99.9,
+                "retention_rate": 93.0
+              },
+              "total": {
+                "return_to_work_rate": 99.9,
+                "retention_rate": 92.9
+              }
+            },
+            "note": "Parental leave includes maternity, paternity and adoption leave"
+          }
+        }
+      },
+      "principle_5_human_rights": {
+        "essential_indicators": {
+          "60_remuneration_salary_wages": {
+            "priority": "most_critical_for_pay_equity",
+            "board_of_directors": {
+              "male": {
+                "number": 9,
+                "median_remuneration_lakh": 263.6
+              },
+              "female": {
+                "number": 2,
+                "median_remuneration_lakh": 133.3
+              }
+            },
+            "key_managerial_personnel": {
+              "male": {
+                "number": 5,
+                "median_remuneration_lakh": 721.3
+              },
+              "female": {
+                "number": 0,
+                "median_remuneration_lakh": 0
+              }
+            },
+            "employees_other_than_bod_kmp": {
+              "male": {
+                "number": 387444,
+                "median_remuneration_lakh": 14.8
+              },
+              "female": {
+                "number": 214098,
+                "median_remuneration_lakh": 10.4
+              }
+            }
+          },
+          "gross_wages_to_females": {
+            "fy_2023_24": 26.1,
+            "fy_2022_23": 26.1,
+            "interpretation": "Females receive 26.1% of total wages despite being 35.6% of workforce"
+          }
+        }
+      }
+    }
+  }
+}

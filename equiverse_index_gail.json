@@ -1,0 +1,468 @@
+{
+  "metadata": {
+    "analysis_title": "EQUIVERSE INDEX CALCULATION: GAIL (India) Limited",
+    "entity_name": "GAIL (India) Limited",
+    "reporting_period": "FY 2023-24",
+    "sector": "Energy & Natural Gas",
+    "calculation_date": "January 6, 2026",
+    "data_source": "BRSR Report FY 2023-24",
+    "data_reliability": "★★★ (Primary Source - Audited BRSR)",
+    "methodology_version": "Equiverse Index v1.0"
+  },
+
+  "tier_mapping_methodology": {
+    "note": "BRSR reports do not explicitly provide tier breakdowns. Proxy mapping used:",
+    "tier_1_entry_level": {
+      "proxy_source": "Other than Permanent Workers",
+      "rationale": "Contractual workers = entry point",
+      "male_count": 13541,
+      "female_count": 452,
+      "total_count": 13993
+    },
+    "tier_2_3_4_aggregated_management": {
+      "proxy_source": "Permanent Employees",
+      "rationale": "Aggregates all management levels (BRSR limitation)",
+      "male_count": 3889,
+      "female_count": 302,
+      "total_count": 4191,
+      "note": "Cannot disaggregate into Tier 2, 3, 4 without additional data"
+    },
+    "tier_5_c_suite": {
+      "proxy_source": "Key Management Personnel (KMP)",
+      "rationale": "Excluding Whole Time Directors",
+      "male_count": 1,
+      "female_count": 0,
+      "total_count": 1
+    },
+    "board_level": {
+      "proxy_source": "Board of Directors",
+      "rationale": "Governance layer (14 directors total)",
+      "male_count": 13,
+      "female_count": 1,
+      "total_count": 14
+    }
+  },
+
+  "obj_1_representation_analysis": {
+    "objective": "Distribution of men vs. women at each hierarchical level",
+    "tier_1_entry_level": {
+      "male_count": 13541,
+      "female_count": 452,
+      "total_count": 13993,
+      "male_percentage": 96.77,
+      "female_percentage": 3.23,
+      "status": "SEVERE Female Underrepresentation at Entry"
+    },
+    "tier_2_3_4_management_aggregated": {
+      "male_count": 3889,
+      "female_count": 302,
+      "total_count": 4191,
+      "male_percentage": 93.0,
+      "female_percentage": 7.0,
+      "status": "Critical Female Underrepresentation",
+      "note": "Aggregated - cannot isolate individual tiers"
+    },
+    "tier_5_c_suite": {
+      "male_count": 1,
+      "female_count": 0,
+      "total_count": 1,
+      "male_percentage": 100.0,
+      "female_percentage": 0.0,
+      "status": "Glass Ceiling - Complete Exclusion"
+    },
+    "board_level": {
+      "male_count": 13,
+      "female_count": 1,
+      "total_count": 14,
+      "male_percentage": 92.86,
+      "female_percentage": 7.14,
+      "status": "Far Below 33% Compliance Target"
+    },
+    "key_insight": "GAIL has VERY LOW female representation at ALL levels: Entry (3.23%), Management (7.0%), C-Suite (0%), Board (7.14%)"
+  },
+
+  "calc_1_tier_representation_ratios": {
+    "description": "Female percentage at each tier",
+    "R1_entry_level": 3.23,
+    "R2_junior_management": 7.0,
+    "R3_middle_management": 7.0,
+    "R4_senior_management": 7.0,
+    "R5_c_suite": 0.0,
+    "R_board": 7.14,
+    "formula_used": "Female_Ratio_i = (Female_Count_i / Total_Count_i) × 100"
+  },
+
+  "obj_2_progression_leaky_pipeline": {
+    "objective": "Where women disappear between levels",
+    "transition_analysis": {
+      "entry_to_junior_management": {
+        "from_percentage": 3.23,
+        "to_percentage": 7.0,
+        "drop_percentage_points": -3.77,
+        "drop_rate": -116.72,
+        "status": "REVERSE PIPELINE - Women INCREASE from entry to management (rare pattern!)"
+      },
+      "junior_to_middle_management": {
+        "from_percentage": 7.0,
+        "to_percentage": 7.0,
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "status": "Stable (due to aggregated data)"
+      },
+      "middle_to_senior_management": {
+        "from_percentage": 7.0,
+        "to_percentage": 7.0,
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "status": "Stable (due to aggregated data)"
+      },
+      "senior_to_c_suite": {
+        "from_percentage": 7.0,
+        "to_percentage": 0.0,
+        "drop_percentage_points": 7.0,
+        "drop_rate": 100.0,
+        "status": "COMPLETE BLOCKAGE - Glass Ceiling"
+      }
+    },
+    "key_insight": "UNIQUE PATTERN: Women INCREASE from entry (3.23%) to management (7.0%), suggesting senior female hires, but still blocked at C-Suite (0%)"
+  },
+
+  "calc_2_pipeline_flow_ratio": {
+    "description": "Measures how well women progress from entry to top",
+    "formula": "PFR = R5 / R1",
+    "calculation": "0.0 / 3.23 = 0.0",
+    "pfr_score": 0.0,
+    "interpretation": "Total Pipeline Blockage at C-Suite",
+    "ideal_pfr": 1.0,
+    "actual_vs_ideal": "0% of ideal pipeline flow",
+    "status": "CRITICAL FAILURE",
+    "alternative_calculation_board": {
+      "formula": "PFR_Board = R_Board / R1",
+      "calculation": "7.14 / 3.23 = 2.21",
+      "pfr_board_score": 2.21,
+      "interpretation": "Board has HIGHER female % than entry - indicates senior lateral hiring"
+    }
+  },
+
+  "calc_3_broken_rung_detection": {
+    "description": "First promotion bottleneck severity",
+    "formula": "BRS = (R1 - R2) / R1",
+    "calculation": "(3.23 - 7.0) / 3.23 = -1.167",
+    "broken_rung_severity": -1.167,
+    "broken_rung_percentage": -116.72,
+    "interpretation": "NEGATIVE BROKEN RUNG - Women INCREASE at first promotion",
+    "severity_classification": {
+      "threshold_minimal": 0.1,
+      "threshold_moderate": 0.4,
+      "threshold_severe": 0.7,
+      "actual_severity": -1.167,
+      "classification": "REVERSE PIPELINE - Likely due to lateral hiring of experienced women"
+    },
+    "key_insight": "Entry-level has FEWER women (3.23%) than management (7.0%), suggesting GAIL hires experienced women laterally rather than promoting from within"
+  },
+
+  "obj_3_retention_broken_rung": {
+    "objective": "Why are women leaving?",
+    "turnover_analysis": {
+      "fy_2023_24": {
+        "male_turnover_rate": 3.84,
+        "female_turnover_rate": 3.79,
+        "gap": -0.05,
+        "interpretation": "Near-perfect parity (women stay slightly longer)"
+      },
+      "fy_2022_23": {
+        "male_turnover_rate": 4.29,
+        "female_turnover_rate": 5.39,
+        "gap": 1.1,
+        "interpretation": "Women left at higher rate"
+      },
+      "fy_2021_22": {
+        "male_turnover_rate": 4.82,
+        "female_turnover_rate": 3.73,
+        "gap": -1.09,
+        "interpretation": "Women stayed longer"
+      }
+    },
+    "retention_rate_analysis": {
+      "fy_2023_24": {
+        "male_retention_rate": 96.16,
+        "female_retention_rate": 96.21,
+        "gap": 0.05,
+        "interpretation": "Near-perfect parity"
+      }
+    },
+    "key_insight": "Retention is NOT the problem. Low female % at ALL levels suggests hiring problem at entry + possible lateral hiring at mid-level"
+  },
+
+  "calc_4_retention_metrics": {
+    "description": "Gender-specific retention calculations",
+    "permanent_employees_fy_2023_24": {
+      "retention_rate_male": 96.16,
+      "retention_rate_female": 96.21,
+      "retention_gap": 0.05,
+      "formula_used": "Retention_Rate = 100 - Turnover_Rate",
+      "interpretation": "Perfect gender parity in retention"
+    },
+    "parental_leave_retention": {
+      "male": {
+        "return_to_work_rate": 96.9,
+        "retention_rate_after_return": 95.9,
+        "total_retention": 92.9
+      },
+      "female": {
+        "return_to_work_rate": 100.0,
+        "retention_rate_after_return": 100.0,
+        "total_retention": 100.0
+      },
+      "gender_gap": {
+        "return_to_work_gap": 3.1,
+        "retention_after_return_gap": 4.1,
+        "total_retention_gap": 7.1,
+        "interpretation": "Women have PERFECT parental leave retention (100% return, 100% stay) - better than men"
+      }
+    }
+  },
+
+  "calc_5_auc_equity_score": {
+    "description": "Area Under Curve - Overall equity representation",
+    "methodology": "Sum of female percentages across all 5 tiers",
+    "tier_percentages": {
+      "tier_1": 3.23,
+      "tier_2": 7.0,
+      "tier_3": 7.0,
+      "tier_4": 7.0,
+      "tier_5": 0.0
+    },
+    "actual_auc": 24.23,
+    "ideal_auc": 250.0,
+    "formula": "Equity_Score = (Actual_AUC / Ideal_AUC) × 100",
+    "calculation": "(24.23 / 250.0) × 100 = 9.69",
+    "overall_equity_score_auc": 9.69,
+    "interpretation": "Company achieves only 9.69% of ideal gender equity - WORST among all companies analyzed",
+    "grade": "F (Critical Failure - lowest score yet)"
+  },
+
+  "calc_6_weighted_tier_score": {
+    "description": "Weighted score emphasizing leadership tiers",
+    "weights": {
+      "tier_1_entry": 0.10,
+      "tier_2_junior": 0.15,
+      "tier_3_middle": 0.25,
+      "tier_4_senior": 0.30,
+      "tier_5_c_suite": 0.20
+    },
+    "weighted_calculations": {
+      "tier_1_contribution": {
+        "female_percentage": 3.23,
+        "weight": 0.10,
+        "weighted_score": 0.323
+      },
+      "tier_2_contribution": {
+        "female_percentage": 7.0,
+        "weight": 0.15,
+        "weighted_score": 1.05
+      },
+      "tier_3_contribution": {
+        "female_percentage": 7.0,
+        "weight": 0.25,
+        "weighted_score": 1.75
+      },
+      "tier_4_contribution": {
+        "female_percentage": 7.0,
+        "weight": 0.30,
+        "weighted_score": 2.1
+      },
+      "tier_5_contribution": {
+        "female_percentage": 0.0,
+        "weight": 0.20,
+        "weighted_score": 0.0
+      }
+    },
+    "total_weighted_score": 5.223,
+    "formula": "Weighted_Score = Σ(Weight_i × Female_Ratio_i)",
+    "normalized_weighted_index": {
+      "calculation": "(5.223 / 50) × 100",
+      "weighted_equity_index": 10.45,
+      "interpretation": "Weighted index slightly higher than AUC (10.45 vs 9.69) due to 7% at management vs 3.23% at entry"
+    }
+  },
+
+  "calc_7_bottleneck_tier_identification": {
+    "description": "Identify tiers with >10% drop in female representation",
+    "transitions": [
+      {
+        "from_tier": "Entry (Tier 1)",
+        "to_tier": "Junior Management (Tier 2)",
+        "drop_percentage_points": -3.77,
+        "drop_rate": -116.72,
+        "threshold": 10.0,
+        "is_bottleneck": false,
+        "severity": "REVERSE",
+        "status": "WOMEN INCREASE (lateral hiring suspected)"
+      },
+      {
+        "from_tier": "Junior Management (Tier 2)",
+        "to_tier": "Middle Management (Tier 3)",
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "threshold": 10.0,
+        "is_bottleneck": false,
+        "severity": "None",
+        "status": "No data (aggregated)"
+      },
+      {
+        "from_tier": "Middle Management (Tier 3)",
+        "to_tier": "Senior Management (Tier 4)",
+        "drop_percentage_points": 0.0,
+        "drop_rate": 0.0,
+        "threshold": 10.0,
+        "is_bottleneck": false,
+        "severity": "None",
+        "status": "No data (aggregated)"
+      },
+      {
+        "from_tier": "Senior Management (Tier 4)",
+        "to_tier": "C-Suite (Tier 5)",
+        "drop_percentage_points": 7.0,
+        "drop_rate": 100.0,
+        "threshold": 10.0,
+        "is_bottleneck": true,
+        "severity": "COMPLETE BLOCKAGE",
+        "status": "GLASS CEILING - ONLY BOTTLENECK"
+      }
+    ],
+    "critical_bottlenecks_summary": {
+      "count": 1,
+      "locations": [
+        "Senior Management → C-Suite (100% drop)"
+      ]
+    }
+  },
+
+  "compensation_pay_equity_analysis": {
+    "objective": "Measure pay gaps at each level",
+    "board_of_directors": {
+      "male_median_remuneration": 345577,
+      "female_median_remuneration": 0,
+      "pay_gap_absolute": "N/A",
+      "pay_gap_percentage": "N/A",
+      "interpretation": "Only male directors with remuneration data - insufficient female representation for comparison"
+    },
+    "key_management_personnel": {
+      "male_median_remuneration": 251978,
+      "female_median_remuneration": 0,
+      "pay_gap_absolute": "N/A",
+      "pay_gap_percentage": "N/A",
+      "interpretation": "Zero female KMPs = no pay gap data"
+    },
+    "employees_other_than_bod_kmp": {
+      "male_median_remuneration": 174253,
+      "female_median_remuneration": 146901,
+      "pay_gap_absolute": 27352,
+      "pay_gap_percentage": 15.70,
+      "interpretation": "Women employees earn 15.70% less than male employees - moderate gap"
+    },
+    "workers": {
+      "male_median_remuneration": 75092,
+      "female_median_remuneration": 59778,
+      "pay_gap_absolute": 15314,
+      "pay_gap_percentage": 20.39,
+      "interpretation": "Women workers earn 20.39% less than male workers"
+    },
+    "overall_pay_equity_status": "Moderate pay gaps: Employees (15.70%), Workers (20.39%)",
+    "wage_share_analysis": {
+      "female_percentage_of_employees": 7.0,
+      "female_percentage_of_total_wages": 6.0,
+      "wage_share_gap": -1.0,
+      "interpretation": "Women are 7% of employees but receive only 6% of wages - underpaid by 1 percentage point"
+    }
+  },
+
+  "comparison_with_previous_companies": {
+    "metric": "GAIL vs TCS vs Sun Pharma",
+    "comparisons": {
+      "entry_level_female_percentage": {
+        "gail": 3.23,
+        "tcs": 36.8,
+        "sun_pharma": 41.25,
+        "ranking": "3rd (worst) - 38 points behind Sun Pharma"
+      },
+      "management_female_percentage": {
+        "gail": 7.0,
+        "tcs": 35.6,
+        "sun_pharma": 10.81,
+        "ranking": "3rd (worst) - 28.6 points behind TCS"
+      },
+      "c_suite_female_percentage": {
+        "gail": 0.0,
+        "tcs": 0.0,
+        "sun_pharma": 0.0,
+        "ranking": "Tie for worst (all fail)"
+      },
+      "board_female_percentage": {
+        "gail": 7.14,
+        "tcs": 22.2,
+        "sun_pharma": 12.5,
+        "ranking": "3rd (worst) - 15 points behind TCS"
+      },
+      "broken_rung_severity": {
+        "gail": -116.72,
+        "tcs": 3.26,
+        "sun_pharma": 73.79,
+        "ranking": "UNIQUE - Reverse pipeline (women increase at management)"
+      },
+      "overall_auc_score": {
+        "gail": 9.69,
+        "tcs": 57.44,
+        "sun_pharma": 29.47,
+        "ranking": "3rd (worst by far) - 19.78 points behind Sun Pharma"
+      },
+      "weighted_index": {
+        "gail": 10.45,
+        "tcs": 57.2,
+        "sun_pharma": 23.38,
+        "ranking": "3rd (worst) - 12.93 points behind Sun Pharma"
+      }
+    },
+    "verdict": "GAIL has the WORST gender equity performance among all three companies analyzed, with critically low female representation at ALL levels"
+  },
+
+  "executive_summary": {
+    "overall_verdict": "CATASTROPHIC EQUITY FAILURE ACROSS ALL TIERS",
+    "key_findings": [
+      "LOWEST female representation at entry (3.23%) among all companies analyzed",
+      "Management has 7.0% women - better than entry but still critically low",
+      "UNIQUE reverse pipeline: Women INCREASE from entry (3.23%) to management (7.0%)",
+      "Suggests lateral hiring of experienced women rather than internal promotion",
+      "C-Suite: 0% women (same failure as TCS and Sun Pharma)",
+      "Board: Only 7.14% women (far below 33% mandate)",
+      "Overall AUC Score: 9.69 (worst performance - Grade F)",
+      "Women are 7% of employees but receive only 6% of total wages",
+      "Pay gaps: Moderate at 15.70% (employees) and 20.39% (workers)"
+    ],
+    "primary_strength": "Perfect parental leave retention for women (100% return, 100% stay)",
+    "primary_weakness": "Systemically low female hiring/representation at ALL levels, starting from entry (3.23%)",
+    "unique_pattern": "Reverse pipeline (entry < management) suggests failure to hire women at entry level combined with token lateral hiring at mid-levels",
+    "recommended_interventions": [
+      "URGENT: Institute 25-30% female hiring targets at entry level",
+      "Audit entry-level recruitment process for gender bias",
+      "Increase Board female representation to meet 33% mandate (currently only 7.14%)",
+      "Reserve at least 1 C-Suite position for qualified female candidate",
+      "Investigate why only 3.23% of entry-level hires are women in natural gas sector",
+      "Address wage share gap (7% employees but only 6% wages)",
+      "Create clear promotion pathways for the 7% women in management",
+      "Partner with engineering colleges to build female talent pipeline"
+    ]
+  },
+
+  "sector_insight": {
+    "sector": "Energy & Natural Gas",
+    "gail_performance": "Catastrophic failure - lowest female representation among all companies",
+    "sector_hypothesis": "Traditional energy/heavy industry sectors (oil, gas, petrochemicals) have structural barriers to female entry",
+    "comparison_to_other_sectors": {
+      "it_tcs": "TCS has 36.8% at entry vs GAIL's 3.23% (11x better)",
+      "pharma_sun_pharma": "Sun Pharma has 41.25% at entry vs GAIL's 3.23% (13x better)",
+      "insight": "Energy sector appears to have the WORST gender diversity in India's corporate landscape"
+    }
+  }
+}

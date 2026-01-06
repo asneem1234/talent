@@ -1,0 +1,549 @@
+{
+  "brsr_gender_data_points": {
+    "metadata": {
+      "entity_name": "Sun Pharmaceutical Industries Limited (SPIL)",
+      "reporting_period": "April 1, 2024 to March 31, 2025",
+      "total_data_points": 97,
+      "explicitly_gender_disaggregated": 14,
+      "gender_relevant_high_impact": 13,
+      "gender_adjacent_intersectional": 10,
+      "governance_and_process": 60
+    },
+    "section_a_general_disclosures": {
+      "i_basic_information": {
+        "1_brsr_contact_person": {
+          "priority": "low",
+          "fields": {
+            "name": "Anoop Deshpande",
+            "contact_details": "Company Secretary and Compliance Officer, Email: anoop.deshpande@sunpharma.com, Tel. No. +91-22-4324 4324",
+            "gender": "Male"
+          }
+        }
+      },
+      "ii_workforce_composition": {
+        "2_employees_workers_by_gender": {
+          "priority": "critical",
+          "permanent_employees": {
+            "male": {"number": 13089, "percentage": 89.19},
+            "female": {"number": 1586, "percentage": 10.81}
+          },
+          "other_than_permanent_employees": {
+            "male": {"number": 792, "percentage": 58.75},
+            "female": {"number": 556, "percentage": 41.25}
+          },
+          "permanent_workers": {
+            "male": {"number": 4394, "percentage": 95.07},
+            "female": {"number": 228, "percentage": 4.93}
+          },
+          "other_than_permanent_workers": {
+            "male": {"number": 4562, "percentage": 87.24},
+            "female": {"number": 667, "percentage": 12.76}
+          }
+        },
+        "3_differently_abled_by_gender": {
+          "priority": "critical",
+          "differently_abled_permanent_employees": {
+            "male": {"number": 8, "percentage": 88.89},
+            "female": {"number": 1, "percentage": 11.11}
+          },
+          "differently_abled_other_than_permanent_employees": {
+            "male": {"number": 0, "percentage": 0.0},
+            "female": {"number": 0, "percentage": 0.0}
+          },
+          "differently_abled_permanent_workers": {
+            "male": {"number": 25, "percentage": 78.13},
+            "female": {"number": 7, "percentage": 21.88}
+          },
+          "differently_abled_other_than_permanent_workers": {
+            "male": {"number": 0, "percentage": 0.0},
+            "female": {"number": 0, "percentage": 0.0}
+          }
+        },
+        "4_women_in_leadership": {
+          "priority": "critical",
+          "board_of_directors": {
+            "total_count": 8,
+            "number_of_females": 1,
+            "percentage_of_females": 13.0
+          },
+          "key_management_personnel": {
+            "total_count": 2,
+            "number_of_females": 0,
+            "percentage_of_females": 0.0
+          }
+        },
+        "5_turnover_rate_by_gender": {
+          "priority": "critical",
+          "current_year": {
+            "permanent_employees": {
+              "male_turnover_rate": 14.09,
+              "female_turnover_rate": 12.64,
+              "total_turnover_rate": 13.90
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 7.39,
+              "female_turnover_rate": 2.16,
+              "total_turnover_rate": 6.95
+            }
+          },
+          "previous_year": {
+            "permanent_employees": {
+              "male_turnover_rate": 13.90,
+              "female_turnover_rate": 11.29,
+              "total_turnover_rate": 13.59
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 7.11,
+              "female_turnover_rate": 2.82,
+              "total_turnover_rate": 6.78
+            }
+          },
+          "prior_year": {
+            "permanent_employees": {
+              "male_turnover_rate": 13.20,
+              "female_turnover_rate": 13.90,
+              "total_turnover_rate": 13.20
+            },
+            "permanent_workers": {
+              "male_turnover_rate": 6.20,
+              "female_turnover_rate": 2.20,
+              "total_turnover_rate": 6.10
+            }
+          }
+        }
+      },
+      "iii_subsidiary_holding_company": {
+        "6_subsidiary_participation": {
+          "companies": ["Complete list available on page 306 of Annual Report"],
+          "note": "Indian subsidiaries participate in sustainability and business responsibility initiatives of the Company."
+        }
+      },
+      "iv_csr_applicability": {
+        "7_csr_details": {
+          "csr_applicable": "Yes",
+          "turnover_rs": 230033.3,
+          "net_worth_rs": 199586.6,
+          "csr_spend_reporting_year": "508.34 Million"
+        }
+      },
+      "v_complaints_grievances": {
+        "8_stakeholder_complaints": {
+          "current_fy": {
+            "communities": {"filed": 0, "pending": 0, "remarks": ""},
+            "investors": {"filed": 40, "pending": 2, "remarks": "Shareholders"},
+            "shareholders": {"filed": 40, "pending": 2, "remarks": ""},
+            "employees_and_workers": {"filed": 7, "pending": 1, "remarks": ""},
+            "customers": {"filed": 1100, "pending": 65, "remarks": "Packaging defects, product quality"},
+            "value_chain_partners": {"filed": 0, "pending": 0, "remarks": ""},
+            "others": {"filed": 0, "pending": 0, "remarks": ""}
+          },
+          "previous_fy": {
+            "communities": {"filed": 0, "pending": 0, "remarks": ""},
+            "investors": {"filed": 46, "pending": 0, "remarks": "Shareholders"},
+            "shareholders": {"filed": 46, "pending": 0, "remarks": ""},
+            "employees_and_workers": {"filed": 2, "pending": 0, "remarks": ""},
+            "customers": {"filed": 1034, "pending": 29, "remarks": ""},
+            "value_chain_partners": {"filed": 0, "pending": 0, "remarks": ""},
+            "others": {"filed": 0, "pending": 0, "remarks": ""}
+          },
+          "grievance_redressal_mechanism": {
+            "exists": "Yes",
+            "web_link": "https://sunpharma.com/policies/"
+          }
+        }
+      },
+      "vi_material_esg_issues": {
+        "9_material_responsible_business_conduct_issues": {
+          "priority": "critical",
+          "issues": [
+            {
+              "material_issue": "Diversity, Equity and Inclusivity",
+              "risk_or_opportunity": "Opportunity",
+              "rationale": "Fostering a diverse and inclusive workforce enhances performance by bringing together varied experiences.",
+              "approach": "Promote inclusion focus on equal opportunities, non-discrimination and merit-based processes.",
+              "financial_implications": "Positive: Fosters creative thinking, encourages employee engagement, and unlocks higher levels of efficiency."
+            }
+          ]
+        }
+      }
+    },
+    "section_b_management_process_disclosures": {
+      "vii_policy_governance_framework": {
+        "10_policy_coverage": {
+          "principles": {
+            "p1": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p2": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p3": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/", "note": "Employee well-being - gender-critical"},
+            "p4": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p5": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/", "note": "Human rights - gender-critical"},
+            "p6": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p7": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p8": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"},
+            "p9": {"covers_principle": "Yes", "board_approval": "Yes", "web_link": "https://sunpharma.com/policies/"}
+          }
+        },
+        "11_policy_translation_to_procedures": {
+          "principles": {
+            "p1": {"translated_to_procedures": "Yes"},
+            "p2": {"translated_to_procedures": "Yes"},
+            "p3": {"translated_to_procedures": "Yes"},
+            "p4": {"translated_to_procedures": "Yes"},
+            "p5": {"translated_to_procedures": "Yes"},
+            "p6": {"translated_to_procedures": "Yes"},
+            "p7": {"translated_to_procedures": "Yes"},
+            "p8": {"translated_to_procedures": "Yes"},
+            "p9": {"translated_to_procedures": "Yes"}
+          }
+        },
+        "12_policy_extension_to_value_chain": {
+          "principles": {
+            "p1": {"extends_to_value_chain": "Yes"},
+            "p2": {"extends_to_value_chain": "Yes"},
+            "p3": {"extends_to_value_chain": "Yes"},
+            "p4": {"extends_to_value_chain": "Yes"},
+            "p5": {"extends_to_value_chain": "Yes"},
+            "p6": {"extends_to_value_chain": "Yes"},
+            "p7": {"extends_to_value_chain": "Yes"},
+            "p8": {"extends_to_value_chain": "Yes"},
+            "p9": {"extends_to_value_chain": "Yes"}
+          }
+        },
+        "13_standards_certifications": {
+          "certifications": [
+            "National Guidelines on Responsible Business Conduct (NGRBC)",
+            "United Nations Global Compact (UNGC)",
+            "ISO 14001: 2015",
+            "ISO 45001: 2018",
+            "United Nations Guiding Principles on Business and Human Rights (UNGP)",
+            "ISO 50001:2018",
+            "ISO 9001: 2015"
+          ]
+        },
+        "14_commitments_goals_targets": {
+          "priority": "critical",
+          "commitments": [
+            {
+              "description": "Achieve 30% women representation across global workforce by 2040",
+              "timeline": "2040",
+              "principle": "Diversity"
+            }
+          ]
+        },
+        "15_performance_against_targets": {
+          "priority": "critical",
+          "performance": [
+            {
+              "target": "30% women representation",
+              "current_status": "Tracking against 2040 target"
+            }
+          ]
+        },
+        "16_directors_statement": {
+          "priority": "critical",
+          "statement": "Director's Message highlights sustainability focus, achievements in S&P Global Sustainability Yearbook 2025, and diversity goals.",
+          "gender_equity_progress": "Diversity target to achieve 30% women representation across global workforce by 2040."
+        },
+        "17_highest_authority_for_implementation": {
+          "details": {
+            "name": "Mr. Aalok Shanghvi",
+            "designation": "Whole-time Director & Chief Operating Officer",
+            "gender": "Male"
+          }
+        },
+        "18_committee_oversight": {
+          "committee_details": {
+            "name": "Corporate Governance & ESG Committee",
+            "responsible_director": "Mr. Aalok Shanghvi",
+            "gender_composition": ["Mainly Board subcommittee oversaw by COO"]
+          }
+        },
+        "19_review_frequency": {
+          "principles": {
+            "p1": {"performance_review": {"who": "Director", "frequency": "Periodically/Need based"}, "compliance_review": {"who": "Director", "frequency": "Ongoing basis"}}
+          }
+        },
+        "20_independent_assessment": {
+          "principles": {
+            "p1": {"external_evaluation": "No", "agency_name": "Internal review"},
+            "p3": {"external_evaluation": "No", "agency_name": "Internal review", "note": "Employee well-being"},
+            "p5": {"external_evaluation": "No", "agency_name": "Internal review", "note": "Human Rights"}
+          }
+        },
+        "21_reasons_for_non_coverage": {
+          "reasons": []
+        }
+      }
+    },
+    "section_c_principle_wise_performance": {
+      "principle_1_ethics_transparency_accountability": {
+        "essential_indicators": {
+          "22_training_and_awareness": {
+            "board_of_directors": {"total_programs": 4, "topics": ["P1-P6, P8"], "percentage_covered": 100},
+            "key_managerial_personnel": {"total_programs": 4, "topics": ["P1-P6, P8"], "percentage_covered": 100},
+            "employees_other_than_bod_kmps": {"total_programs": 581, "topics": ["GCoC, Safety"], "percentage_covered": 100},
+            "workers": {"total_programs": 581, "topics": ["GCoC, Safety"], "percentage_covered": 100}
+          },
+          "23_fines_penalties_punishments": {
+            "monetary": [
+              {"agency": "MCA", "amount": 960000, "brief": "Compounding of offences under Sec 177"},
+              {"agency": "GST/Customs", "amount": "Multiple", "brief": "Tax and duty related penalties"}
+            ],
+            "non_monetary": []
+          },
+          "25_anti_corruption_anti_bribery_policy": {
+            "policy_exists": "Yes",
+            "web_link": "https://sunpharma.com/wp-content/uploads/2025/04/Sun-Pharma-Global-Code-of-Conduct_1-April-2025.pdf"
+          },
+          "26_disciplinary_actions_for_corruption": {
+            "current_fy": {"directors": 0, "kmps": 0, "employees": 0, "workers": 0},
+            "previous_fy": {"directors": 0, "kmps": 0, "employees": 0, "workers": 0}
+          },
+          "27_conflict_of_interest_complaints": {
+            "current_fy": {
+              "directors": {"number": 0, "remarks": "NA"},
+              "kmps": {"number": 0, "remarks": "NA"}
+            }
+          }
+        }
+      },
+      "principle_3_employee_wellbeing": {
+        "essential_indicators": {
+          "31_employee_wellbeing_measures": {
+            "priority": "critical",
+            "permanent_employees": {
+              "male": {
+                "health_insurance": {"number": 13089, "percentage": 100},
+                "accident_insurance": {"number": 13089, "percentage": 100},
+                "maternity_benefits": {"number": 0, "percentage": 0},
+                "paternity_benefits": {"number": 13089, "percentage": 100},
+                "day_care_facilities": {"number": 13089, "percentage": 100}
+              },
+              "female": {
+                "health_insurance": {"number": 1586, "percentage": 100},
+                "accident_insurance": {"number": 1586, "percentage": 100},
+                "maternity_benefits": {"number": 1586, "percentage": 100},
+                "paternity_benefits": {"number": 0, "percentage": 0},
+                "day_care_facilities": {"number": 1586, "percentage": 100}
+              }
+            },
+            "other_than_permanent_employees": {
+              "male": {
+                "health_insurance": {"number": 792, "percentage": 100},
+                "paternity_benefits": {"number": 792, "percentage": 100}
+              },
+              "female": {
+                "health_insurance": {"number": 556, "percentage": 100},
+                "maternity_benefits": {"number": 556, "percentage": 100}
+              }
+            }
+          },
+          "32_worker_wellbeing_measures": {
+            "priority": "critical",
+            "permanent_workers": {
+              "male": {"health_insurance": {"number": 4394, "percentage": 100}, "paternity_benefits": {"number": 4394, "percentage": 100}},
+              "female": {"health_insurance": {"number": 228, "percentage": 100}, "maternity_benefits": {"number": 228, "percentage": 100}}
+            },
+            "other_than_permanent_workers": {
+              "male": {"health_insurance": {"number": 4562, "percentage": 100}, "paternity_benefits": {"number": 4562, "percentage": 100}},
+              "female": {"health_insurance": {"number": 667, "percentage": 100}, "maternity_benefits": {"number": 667, "percentage": 100}}
+            }
+          },
+          "33_retirement_benefits": {
+            "priority": "critical",
+            "current_fy": {
+              "employees": {
+                "pf": {"percentage_covered": 100, "deducted_and_deposited": "Yes"},
+                "gratuity": {"percentage_covered": 100, "deducted_and_deposited": "Yes"},
+                "esi": {"percentage_covered": 13.10, "deducted_and_deposited": "Yes"}
+              }
+            }
+          },
+          "34_workplace_accessibility": {
+            "premises_accessible": "Yes",
+            "compliance_with_rpd_act": "Yes"
+          },
+          "35_equal_opportunity_policy": {
+            "priority": "critical",
+            "policy_exists": "Yes",
+            "web_link": "https://sunpharma.com/wp-content/uploads/2025/04/Sun-Pharma-Global-Code-of-Conduct_1-April-2025.pdf"
+          },
+          "36_parental_leave_return_retention": {
+            "priority": "super_critical",
+            "permanent_employees": {
+              "male": {"return_to_work_rate": 92.57, "retention_rate": 94.10},
+              "female": {"return_to_work_rate": 98.33, "retention_rate": 100.0}
+            },
+            "permanent_workers": {
+              "male": {"return_to_work_rate": 93.49, "retention_rate": 96.77},
+              "female": {"return_to_work_rate": 100.0, "retention_rate": 100.0}
+            }
+          },
+          "38_union_membership": {
+            "priority": "critical",
+            "current_fy": {
+              "permanent_employees": {
+                "total": {"percentage": 0},
+                "male": {"percentage": 0},
+                "female": {"percentage": 0}
+              },
+              "permanent_workers": {
+                "male": {"total_c": 4394, "in_unions_d": 792, "percentage": 18.02},
+                "female": {"total_e": 228, "in_unions_f": 91, "percentage": 39.91}
+              }
+            }
+          },
+          "39_training_provided": {
+            "priority": "super_critical",
+            "current_fy": {
+              "employees": {
+                "male": {"total_a": 13089, "health_safety_training": {"percentage": 100}, "skill_upgradation": {"percentage": 100}},
+                "female": {"total_a": 1586, "health_safety_training": {"percentage": 100}, "skill_upgradation": {"percentage": 100}}
+              },
+              "workers": {
+                "male": {"total_d": 4394, "health_safety_training": {"percentage": 100}, "skill_upgradation": {"percentage": 100}},
+                "female": {"total_d": 228, "health_safety_training": {"percentage": 100}, "skill_upgradation": {"percentage": 100}}
+              }
+            }
+          },
+          "40_performance_career_development_reviews": {
+            "priority": "super_critical",
+            "current_fy": {
+              "employees": {
+                "male": {"percentage": 100},
+                "female": {"percentage": 100}
+              },
+              "workers": {
+                "male": {"percentage": 100},
+                "female": {"percentage": 100}
+              }
+            }
+          },
+          "42_safety_incidents": {
+            "priority": "critical",
+            "current_fy": {
+              "employees": {
+                "ltifr_per_million_hours": 0.065,
+                "total_recordable_injuries": 17,
+                "number_of_fatalities": 0,
+                "high_consequence_injury": 0
+              },
+              "workers": {
+                "ltifr_per_million_hours": 0.0,
+                "total_recordable_injuries": 10,
+                "number_of_fatalities": 0,
+                "high_consequence_injury": 0
+              }
+            }
+          }
+        },
+        "leadership_indicators": {
+          "47_life_insurance_compensatory_packages": {
+            "employees_life_insurance": "Yes",
+            "workers_compensatory_package": "Yes"
+          }
+        }
+      },
+      "principle_4_stakeholder_engagement": {
+        "essential_indicators": {
+          "54_stakeholder_engagement": {
+            "stakeholder_groups": [
+              {"group": "Community", "vulnerable": "Yes", "concerns": "Health, education, sanitation"}
+            ]
+          }
+        }
+      },
+      "principle_5_human_rights": {
+        "essential_indicators": {
+          "58_human_rights_training": {
+            "priority": "critical",
+            "current_fy": {
+              "employees": {"percentage": 100},
+              "workers": {"percentage": 100}
+            }
+          },
+          "59_minimum_wages": {
+            "priority": "super_critical",
+            "current_fy": {
+              "employees_permanent": {
+                "male": {"more_than_mw": {"percentage": 100}},
+                "female": {"more_than_mw": {"percentage": 100}}
+              },
+              "workers_permanent": {
+                "male": {"more_than_mw": {"percentage": 100}},
+                "female": {"more_than_mw": {"percentage": 100}}
+              }
+            }
+          },
+          "60_remuneration_salary_wages": {
+            "priority": "most_critical_for_pay_equity",
+            "board_of_directors": {
+              "male": {"number": 7, "median_remuneration": 9800000},
+              "female": {"number": 1, "median_remuneration": 6800000}
+            },
+            "key_managerial_personnel": {
+              "male": {"number": 2, "median_remuneration": 32598543},
+              "female": {"number": 0, "median_remuneration": 0}
+            },
+            "employees_other_than_bod_kmp": {
+              "male": {"number": 13087, "median_remuneration": 944836},
+              "female": {"number": 1586, "median_remuneration": 726372}
+            },
+            "workers": {
+              "male": {"number": 4394, "median_remuneration": 417252},
+              "female": {"number": 228, "median_remuneration": 256458}
+            }
+          },
+          "63_human_rights_complaints": {
+            "priority": "critical",
+            "current_fy": {
+              "sexual_harassment": {"filed": 7, "pending": 1, "upheld": 6},
+              "discrimination_at_workplace": {"filed": 0, "pending": 0},
+              "child_labour": {"filed": 0, "pending": 0},
+              "forced_labour": {"filed": 0, "pending": 0},
+              "wages": {"filed": 0, "pending": 0}
+            }
+          },
+          "66_workplace_assessments_human_rights": {
+            "priority": "critical",
+            "child_labour_percentage": 100,
+            "forced_labour_percentage": 100,
+            "sexual_harassment_percentage": 100,
+            "discrimination_at_workplace_percentage": 100,
+            "wages_percentage": 100
+          }
+        }
+      },
+      "principle_8_inclusive_growth_equitable_development": {
+        "leadership_indicators": {
+          "82_preferential_procurement": {
+            "priority": "critical",
+            "policy_exists": "No"
+          },
+          "85_csr_beneficiaries": {
+            "priority": "super_critical",
+            "projects": [
+              {"name": "Mobile Health Care Unit", "beneficiaries": 178900, "vulnerable_percentage": 100},
+              {"name": "Healthcare Infra", "beneficiaries": 68469, "vulnerable_percentage": 100}
+            ]
+          }
+        }
+      },
+      "principle_9_consumer_value_responsible_engagement": {
+        "essential_indicators": {
+          "88_consumer_complaints": {
+            "current_fy": {
+              "data_privacy": {"received": 0, "pending": 0},
+              "advertising": {"received": 0, "pending": 0},
+              "cyber_security": {"received": 0, "pending": 0}
+            }
+          },
+          "89_product_recalls": {
+            "voluntary_recalls": 91,
+            "forced_recalls": 0,
+            "reasons": ["Product quality complaint, deviation, out of specification"]
+          }
+        }
+      }
+    }
+  }
+}

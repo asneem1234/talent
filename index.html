@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equiverse Index - Company Analysis Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.8;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+        }
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .company-selector {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .company-selector label {
+            font-size: 1.2em;
+            margin-right: 15px;
+            font-weight: 600;
+        }
+        .company-selector select {
+            padding: 12px 30px;
+            font-size: 1.1em;
+            border-radius: 8px;
+            border: 2px solid #fff;
+            background: white;
+            color: #2c3e50;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s;
+        }
+        .company-selector select:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        .content {
+            padding: 40px;
+        }
+        .company-info {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
+        .company-info h2 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        .company-info p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .metric-card {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+            border-left: 5px solid #667eea;
+        }
+        .metric-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .metric-card .value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #667eea;
+            display: block;
+            margin: 10px 0;
+        }
+        .metric-card .label {
+            font-size: 0.95em;
+            color: #7f8c8d;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .metric-card.critical .value {
+            color: #e74c3c;
+        }
+        .metric-card.success .value {
+            color: #27ae60;
+        }
+        .metric-card.warning .value {
+            color: #f39c12;
+        }
+        .section {
+            margin-bottom: 50px;
+        }
+        .section h3 {
+            color: #2a5298;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .data-table th {
+            background: #2c3e50;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        .data-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ecf0f1;
+        }
+        .data-table tr:hover {
+            background: #f8f9fa;
+        }
+        .formula-box {
+            background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+            border-left: 5px solid #e17055;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+        }
+        .formula-box h4 {
+            color: #d63031;
+            margin-bottom: 10px;
+        }
+        .formula {
+            font-family: 'Courier New', monospace;
+            font-size: 1.1em;
+            color: #2d3436;
+            background: white;
+            padding: 12px;
+            border-radius: 6px;
+            margin: 10px 0;
+        }
+        .alert {
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+        }
+        .alert-critical {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+        .comparison-badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: 600;
+            margin-left: 10px;
+        }
+        .badge-winner {
+            background: #d4edda;
+            color: #155724;
+        }
+        .badge-loser {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .pyramid-visual {
+            margin: 30px 0;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .pyramid-tier {
+            margin: 8px 0;
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+        }
+        .tier-bar {
+            display: flex;
+            height: 40px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin: 5px 0;
+        }
+        .tier-male {
+            background: #3498db;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9em;
+        }
+        .tier-female {
+            background: #e91e63;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 0.9em;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        .highlight {
+            background: yellow;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>📊 EQUIVERSE INDEX</h1>
+        <h2>Gender Equity Analysis Dashboard</h2>
+        <div class="company-selector">
+            <label for="companySelect">Select Company:</label>
+            <select id="companySelect" onchange="switchCompany()">
+                <option value="sunpharma">Sun Pharmaceutical Industries Ltd</option>
+                <option value="tcs">Tata Consultancy Services Ltd</option>
+                <option value="gail">GAIL (India) Limited</option>
+            </select>
+        </div>
+    </header>
+
+    <div class="content" id="companyContent">
+        <!-- Content will be dynamically loaded here -->
+    </div>
+
+    <footer>
+        <p><strong>Equiverse Index Methodology v1.0</strong></p>
+        <p>Analysis Generated: January 6, 2026</p>
+        <p>Data Sources: BRSR Reports FY 2023-24 / FY 2024-25</p>
+    </footer>
+</div>
+
+<script>
+const companyData = {
+    sunpharma: {
+        name: "Sun Pharmaceutical Industries Limited",
+        sector: "Healthcare & Pharma",
+        period: "FY 2024-25",
+        entry_female: 41.25,
+        entry_male: 58.75,
+        management_female: 10.81,
+        management_male: 89.19,
+        csuite_female: 0.0,
+        csuite_male: 100.0,
+        board_female: 12.5,
+        board_male: 87.5,
+        auc_score: 29.47,
+        weighted_index: 23.38,
+        pfr: 0.0,
+        brs: 73.79,
+        retention_male: 85.91,
+        retention_female: 87.36,
+        pay_gap_board: 30.61,
+        pay_gap_management: 23.12,
+        pay_gap_workers: 38.54,
+        total_employees: 23412,
+        verdict: "CRITICAL EQUITY FAILURE",
+        key_issue: "Broken Rung at Entry → Management (73.79% drop)",
+        grade: "D+",
+        comparison: "loser"
+    },
+    tcs: {
+        name: "Tata Consultancy Services Limited",
+        sector: "Information Technology & AI",
+        period: "FY 2023-24",
+        entry_female: 36.8,
+        entry_male: 63.2,
+        management_female: 35.6,
+        management_male: 64.4,
+        csuite_female: 0.0,
+        csuite_male: 100.0,
+        board_female: 22.2,
+        board_male: 77.8,
+        auc_score: 57.44,
+        weighted_index: 57.2,
+        pfr: 0.0,
+        brs: 3.26,
+        retention_male: 87.5,
+        retention_female: 87.5,
+        pay_gap_board: 49.43,
+        pay_gap_management: 29.73,
+        pay_gap_workers: null,
+        total_employees: 631858,
+        verdict: "MODERATE SUCCESS WITH C-SUITE FAILURE",
+        key_issue: "Glass Ceiling at Senior → C-Suite (100% drop)",
+        grade: "C+",
+        comparison: "winner"
+    },
+    gail: {
+        name: "GAIL (India) Limited",
+        sector: "Energy & Natural Gas",
+        period: "FY 2023-24",
+        entry_female: 3.23,
+        entry_male: 96.77,
+        management_female: 7.0,
+        management_male: 93.0,
+        csuite_female: 0.0,
+        csuite_male: 100.0,
+        board_female: 7.14,
+        board_male: 92.86,
+        auc_score: 9.69,
+        weighted_index: 10.45,
+        pfr: 0.0,
+        brs: -116.72,
+        retention_male: 96.16,
+        retention_female: 96.21,
+        pay_gap_board: null,
+        pay_gap_management: 15.70,
+        pay_gap_workers: 20.39,
+        total_employees: 18184,
+        verdict: "CATASTROPHIC EQUITY FAILURE ACROSS ALL TIERS",
+        key_issue: "Extreme underrepresentation from entry (3.23%) - Hiring Problem",
+        grade: "F",
+        comparison: "loser"
+    }
+};
+
+function switchCompany() {
+    const selected = document.getElementById('companySelect').value;
+    const data = companyData[selected];
+    
+    // Find the best and worst companies for comparison
+    const companies = Object.values(companyData);
+    const sortedByAUC = companies.sort((a, b) => b.auc_score - a.auc_score);
+    const best = sortedByAUC[0];
+    const worst = sortedByAUC[sortedByAUC.length - 1];
+    const other = selected === 'sunpharma' ? companyData.tcs : companyData.sunpharma;
+    
+    document.getElementById('companyContent').innerHTML = `
+        <div class="company-info">
+            <h2>${data.name}</h2>
+            <p><strong>Sector:</strong> ${data.sector} | <strong>Period:</strong> ${data.period} | <strong>Employees:</strong> ${data.total_employees.toLocaleString()}</p>
+        </div>
+
+        <div class="metrics-grid">
+            <div class="metric-card ${data.auc_score < 30 ? 'critical' : data.auc_score < 50 ? 'warning' : 'success'}">
+                <span class="label">Overall Equity Score (AUC)</span>
+                <span class="value">${data.auc_score}</span>
+                <span class="comparison-badge ${data.auc_score > other.auc_score ? 'badge-winner' : 'badge-loser'}">
+                    vs ${other.name.split(' ')[0]}: ${data.auc_score > other.auc_score ? '+' : ''}${(data.auc_score - other.auc_score).toFixed(1)}
+                </span>
+            </div>
+            <div class="metric-card ${data.weighted_index < 30 ? 'critical' : data.weighted_index < 50 ? 'warning' : 'success'}">
+                <span class="label">Weighted Index</span>
+                <span class="value">${data.weighted_index}</span>
+                <span class="comparison-badge ${data.weighted_index > other.weighted_index ? 'badge-winner' : 'badge-loser'}">
+                    vs ${other.name.split(' ')[0]}: ${data.weighted_index > other.weighted_index ? '+' : ''}${(data.weighted_index - other.weighted_index).toFixed(1)}
+                </span>
+            </div>
+            <div class="metric-card critical">
+                <span class="label">Pipeline Flow Ratio</span>
+                <span class="value">${data.pfr.toFixed(2)}</span>
+                <span class="comparison-badge badge-loser">Total Blockage</span>
+            </div>
+            <div class="metric-card ${data.brs < 10 ? 'success' : data.brs < 40 ? 'warning' : 'critical'}">
+                <span class="label">Broken Rung Severity</span>
+                <span class="value">${data.brs.toFixed(1)}%</span>
+                <span class="comparison-badge ${data.brs < other.brs ? 'badge-winner' : 'badge-loser'}">
+                    vs ${other.name.split(' ')[0]}: ${data.brs < other.brs ? '-' : '+'}${Math.abs(data.brs - other.brs).toFixed(1)}
+                </span>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>📈 Hierarchical Representation</h3>
+            <div class="pyramid-visual">
+                <div class="pyramid-tier" style="background: #e8f5e9;">
+                    <strong>Entry Level</strong>
+                    <span>${data.entry_female}% Female</span>
+                </div>
+                <div class="tier-bar">
+                    <div class="tier-male" style="width: ${data.entry_male}%">${data.entry_male}% Male</div>
+                    <div class="tier-female" style="width: ${data.entry_female}%">${data.entry_female}% Female</div>
+                </div>
+
+                <div class="pyramid-tier" style="background: ${data.management_female < 20 ? '#ffebee' : '#fff3e0'}; margin-top: 20px;">
+                    <strong>Management (Tiers 2-4)</strong>
+                    <span>${data.management_female}% Female</span>
+                </div>
+                <div class="tier-bar">
+                    <div class="tier-male" style="width: ${data.management_male}%">${data.management_male}% Male</div>
+                    <div class="tier-female" style="width: ${data.management_female}%">${data.management_female}% Female</div>
+                </div>
+
+                <div class="pyramid-tier" style="background: #ffcdd2; margin-top: 20px;">
+                    <strong>C-Suite</strong>
+                    <span>${data.csuite_female}% Female ❌</span>
+                </div>
+                <div class="tier-bar">
+                    <div class="tier-male" style="width: ${data.csuite_male}%">${data.csuite_male}% Male</div>
+                    ${data.csuite_female > 0 ? `<div class="tier-female" style="width: ${data.csuite_female}%">${data.csuite_female}% Female</div>` : ''}
+                </div>
+
+                <div class="pyramid-tier" style="background: #e1f5fe; margin-top: 20px;">
+                    <strong>Board of Directors</strong>
+                    <span>${data.board_female}% Female</span>
+                </div>
+                <div class="tier-bar">
+                    <div class="tier-male" style="width: ${data.board_male}%">${data.board_male}% Male</div>
+                    <div class="tier-female" style="width: ${data.board_female}%">${data.board_female}% Female</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>🔢 Key Calculations</h3>
+            
+            <div class="formula-box">
+                <h4>📐 CALC-1: Tier Representation Ratios</h4>
+                <div class="formula">
+                    R_Entry = ${data.entry_female}%<br>
+                    R_Management = ${data.management_female}%<br>
+                    R_CSuite = ${data.csuite_female}%<br>
+                    R_Board = ${data.board_female}%
+                </div>
+            </div>
+
+            <div class="formula-box">
+                <h4>📐 CALC-2: Pipeline Flow Ratio (PFR)</h4>
+                <div class="formula">
+                    PFR = R_CSuite / R_Entry<br>
+                    PFR = ${data.csuite_female} / ${data.entry_female}<br>
+                    <strong>PFR = ${data.pfr.toFixed(2)}</strong> (${data.pfr === 0 ? 'Total Blockage' : 'Partial Flow'})
+                </div>
+            </div>
+
+            <div class="formula-box">
+                <h4>📐 CALC-3: Broken Rung Severity (BRS)</h4>
+                <div class="formula">
+                    BRS = (R_Entry - R_Management) / R_Entry × 100<br>
+                    BRS = (${data.entry_female} - ${data.management_female}) / ${data.entry_female} × 100<br>
+                    <strong>BRS = ${data.brs.toFixed(2)}%</strong>
+                </div>
+                <p style="margin-top: 10px; color: #2c3e50;">
+                    <strong>Interpretation:</strong> ${
+                        data.brs < 10 ? '✅ Minimal broken rung - excellent pipeline' :
+                        data.brs < 40 ? '⚠️ Moderate barrier at first promotion' :
+                        '🚨 EXTREME structural barrier'
+                    }
+                </p>
+            </div>
+
+            <div class="formula-box">
+                <h4>📐 CALC-5: Overall Equity Score (AUC)</h4>
+                <div class="formula">
+                    Actual_AUC = ${data.entry_female} + ${data.management_female} + ${data.management_female} + ${data.management_female} + ${data.csuite_female}<br>
+                    Actual_AUC = ${data.entry_female + data.management_female * 3 + data.csuite_female}<br>
+                    <br>
+                    Equity_Score = (Actual_AUC / 250) × 100<br>
+                    <strong>Equity_Score = ${data.auc_score}</strong> / 100
+                </div>
+                <p style="margin-top: 10px; color: #2c3e50;">
+                    <strong>Grade:</strong> ${data.grade} - ${
+                        data.auc_score < 30 ? 'Critical Failure' :
+                        data.auc_score < 50 ? 'Below Average' :
+                        data.auc_score < 70 ? 'Average' : 'Good'
+                    }
+                </p>
+            </div>
+        </div>
+
+        <div class="section">
+            <h3>💰 Pay Equity Analysis</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Level</th>
+                        <th>Gender Pay Gap</th>
+                        <th>Severity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Board of Directors</strong></td>
+                        <td>${data.pay_gap_board}%</td>
+                        <td><span class="comparison-badge badge-loser">${data.pay_gap_board > 30 ? 'Severe' : data.pay_gap_board > 15 ? 'Moderate' : 'Minimal'}</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management/Employees</strong></td>
+                        <td>${data.pay_gap_management}%</td>
+                        <td><span class="comparison-badge badge-loser">${data.pay_gap_management > 30 ? 'Severe' : data.pay_gap_management > 15 ? 'Moderate' : 'Minimal'}</span></td>
+                    </tr>
+                    ${data.pay_gap_workers ? `
+                    <tr>
+                        <td><strong>Workers</strong></td>
+                        <td>${data.pay_gap_workers}%</td>
+                        <td><span class="comparison-badge badge-loser">${data.pay_gap_workers > 30 ? 'Severe' : data.pay_gap_workers > 15 ? 'Moderate' : 'Minimal'}</span></td>
+                    </tr>` : ''}
+                </tbody>
+            </table>
+        </div>
+
+        <div class="section">
+            <h3>🎯 Retention Analysis</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Gender</th>
+                        <th>Retention Rate</th>
+                        <th>Gap Analysis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Male</strong></td>
+                        <td>${data.retention_male}%</td>
+                        <td rowspan="2">
+                            ${data.retention_female > data.retention_male ? 
+                                `<span class="comparison-badge badge-winner">Women stay ${(data.retention_female - data.retention_male).toFixed(2)}% longer</span>` :
+                                data.retention_female < data.retention_male ?
+                                `<span class="comparison-badge badge-loser">Women leave ${(data.retention_male - data.retention_female).toFixed(2)}% more</span>` :
+                                '<span class="comparison-badge badge-winner">Perfect Parity</span>'
+                            }
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>Female</strong></td>
+                        <td>${data.retention_female}%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p style="margin-top: 15px;"><strong>Verdict:</strong> ${
+                data.retention_female >= data.retention_male ?
+                'Leakage is NOT due to attrition. Problem is <span class="highlight">PROGRESSION/PROMOTION</span>, not retention.' :
+                'Women have higher attrition - investigate reasons.'
+            }</p>
+        </div>
+
+        <div class="alert ${data.auc_score < 30 ? 'alert-critical' : data.auc_score < 50 ? 'alert-warning' : 'alert-success'}">
+            <h3>🎯 Overall Verdict: ${data.verdict}</h3>
+            <p style="margin-top: 10px; font-size: 1.1em;"><strong>Primary Issue:</strong> ${data.key_issue}</p>
+            <ul style="margin-left: 20px; margin-top: 10px; line-height: 2;">
+                ${selected === 'sunpharma' ? `
+                    <li>Entry-level parity exists (${data.entry_female}%) but collapses at permanent management (${data.management_female}%)</li>
+                    <li>${data.brs}% of women lost in entry-to-management transition = PRIMARY BOTTLENECK</li>
+                    <li>Women have HIGHER retention (${data.retention_female}% vs ${data.retention_male}%) → Problem is promotion, not attrition</li>
+                    <li>Pay gaps of ${data.pay_gap_management}-${data.pay_gap_workers}% compound the representation problem</li>
+                ` : selected === 'tcs' ? `
+                    <li>Excellent pipeline health (only ${data.brs}% leakage from entry to management)</li>
+                    <li>Stable ${data.management_female}% female representation across all management tiers</li>
+                    <li>Perfect retention parity (${data.retention_female}% = ${data.retention_male}%)</li>
+                    <li>BUT: Glass ceiling at C-Suite (0% women despite ${data.management_female}% at senior level)</li>
+                    <li>Severe board pay gap: ${data.pay_gap_board}% (highest in analysis)</li>
+                ` : `
+                    <li>WORST baseline: Only ${data.entry_female}% women at entry level (vs 36-41% at other companies)</li>
+                    <li>UNIQUE reverse pipeline: Women INCREASE from entry (${data.entry_female}%) to management (${data.management_female}%)</li>
+                    <li>Suggests lateral hiring of experienced women, not internal promotion</li>
+                    <li>Retention is NOT the problem (${data.retention_female}% female vs ${data.retention_male}% male)</li>
+                    <li>PRIMARY ISSUE: Recruitment failure - only ${data.entry_female}% female hiring at entry</li>
+                    <li>Energy sector shows structural barriers to female participation</li>
+                `}
+            </ul>
+        </div>
+
+        <div class="section">
+            <h3>🔄 Cross-Company Comparison</h3>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Metric</th>
+                        <th>Sun Pharma</th>
+                        <th>TCS</th>
+                        <th>GAIL</th>
+                        <th>Best Performer</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Entry Female %</strong></td>
+                        <td>41.25%</td>
+                        <td>36.8%</td>
+                        <td>3.23%</td>
+                        <td><span class="comparison-badge badge-winner">Sun Pharma</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management Female %</strong></td>
+                        <td>10.81%</td>
+                        <td>35.6%</td>
+                        <td>7.0%</td>
+                        <td><span class="comparison-badge badge-winner">TCS (+24.8 pts)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>C-Suite Female %</strong></td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td>0%</td>
+                        <td><span class="comparison-badge badge-loser">All Fail</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Board Female %</strong></td>
+                        <td>12.5%</td>
+                        <td>22.2%</td>
+                        <td>7.14%</td>
+                        <td><span class="comparison-badge badge-winner">TCS</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Broken Rung Severity</strong></td>
+                        <td>73.79%</td>
+                        <td>3.26%</td>
+                        <td>-116.72% (Reverse)</td>
+                        <td><span class="comparison-badge badge-winner">TCS (best pipeline)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall AUC Score</strong></td>
+                        <td>29.47</td>
+                        <td>57.44</td>
+                        <td>9.69</td>
+                        <td><span class="comparison-badge badge-winner">TCS (nearly 6x GAIL)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Weighted Index</strong></td>
+                        <td>23.38</td>
+                        <td>57.2</td>
+                        <td>10.45</td>
+                        <td><span class="comparison-badge badge-winner">TCS (+33.8 pts)</span></td>
+                    </tr>
+                    <tr>
+                        <td><strong>Overall Grade</strong></td>
+                        <td>D+</td>
+                        <td>C+</td>
+                        <td>F</td>
+                        <td><span class="comparison-badge badge-winner">TCS</span></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="alert alert-warning" style="margin-top: 20px;">
+                <h4>🔍 Sector Insight: Three Different Failure Patterns</h4>
+                <ul style="margin-left: 20px; margin-top: 10px;">
+                    <li><strong>Pharma (Sun Pharma):</strong> Loses women EARLY (73.79% drop at first promotion) → <strong>Broken Rung</strong></li>
+                    <li><strong>IT (TCS):</strong> Retains women until the END (3.26% leakage) → <strong>Glass Ceiling</strong></li>
+                    <li><strong>Energy (GAIL):</strong> Doesn't hire women AT ALL (3.23% entry) → <strong>Recruitment Failure</strong></li>
+                    <li><strong>Common Failure:</strong> All three have 0% women in C-Suite despite different pathways</li>
+                    <li><strong>Sector Ranking:</strong> IT &gt; Pharma &gt;&gt;&gt; Energy (GAIL is 6x worse than TCS)</li>
+                </ul>
+            </div>
+        </div>
+    `;
+}
+
+// Load Sun Pharma by default
+switchCompany();
+</script>
+
+</body>
+</html>
